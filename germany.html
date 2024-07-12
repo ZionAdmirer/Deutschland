@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutschland-Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFCE00; /* Yellow */
+      color: #000000; /* Black */
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000; /* Black */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #000000; /* Black */
+      padding: 20px;
+      border-bottom: 5px solid #DD0000; /* Red */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      color: #DD0000; /* Red */
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .header-buttons a {
+      background-color: #000000; /* Black */
+      color: #FFCE00; /* Yellow */
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 20px 0 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #FFCE00; /* Yellow */
+      font-weight: bold;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+      border-bottom: 5px solid #DD0000; /* Red */
+    }
+
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #FFCE00;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #000000; /* Black */
+      color: #FFCE00; /* Yellow */
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: 2px solid #DD0000; /* Red */
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* About Section Styles */
+    .about {
+      padding: 60px 20px;
+      border-bottom: 5px solid #DD0000; /* Red */
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      border: 5px solid #000000; /* Black */
+      border-image: linear-gradient(to right, #000000, #DD0000, #FFCE00) 1;
+      padding: 20px;
+    }
+
+    .about img {
+      width: 300px;
+      margin-right: 40px;
+      border: 5px solid #000000; /* Black */
+    }
+
+    /* Highlights Section Styles */
+    .highlights {
+      background-color: #DD0000; /* Red */
+      padding: 60px 20px;
+      color: #FFCE00; /* Yellow */
+      border-bottom: 5px solid #000000; /* Black */
+    }
+
+    .highlight-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .highlight-item {
+      width: 30%;
+      text-align: center;
+      margin-bottom: 40px;
+      border: 5px solid #000000; /* Black */
+      border-image: linear-gradient(to right, #000000, #DD0000, #FFCE00) 1;
+      padding: 20px;
+    }
+
+    .highlight-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 5px solid #000000; /* Black */
+    }
+
+    /* Events Section Styles */
+    .events {
+      padding: 60px 20px;
+      border-bottom: 5px solid #DD0000; /* Red */
+    }
+
+    .event-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .event-item {
+      width: 30%;
+      text-align: center;
+      margin-bottom: 40px;
+      border: 5px solid #000000; /* Black */
+      border-image: linear-gradient(to right, #000000, #DD0000, #FFCE00) 1;
+      padding: 20px;
+    }
+
+    .event-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 5px solid #000000; /* Black */
+    }
+
+    .event-link {
+      display: inline-block;
+      background-color: #000000; /* Black */
+      color: #FFCE00; /* Yellow */
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: 2px solid #DD0000; /* Red */
+    }
+
+    /* Testimonials Section Styles */
+    .testimonials {
+      background-color: #DD0000; /* Red */
+      padding: 60px 20px;
+      color: #FFCE00; /* Yellow */
+      border-bottom: 5px solid #000000; /* Black */
+    }
+
+    .testimonial-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-item {
+      width: 30%;
+      text-align: center;
+      margin-bottom: 40px;
+      border: 5px solid #000000; /* Black */
+      border-image: linear-gradient(to right, #000000, #DD0000, #FFCE00) 1;
+      padding: 20px;
+    }
+
+    .testimonial-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 5px solid #000000; /* Black */
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 0;
+    }
+
+    cite {
+      font-weight: bold;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #000000; /* Black */
+      color: #FFCE00; /* Yellow */
+      text-align: center;
+      padding: 20px;
+      border-top: 5px solid #DD0000; /* Red */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DEUTSCHLAND</div>
+    <div class="header-buttons">
+       <!-- <li><a href="#">Startseite</a></li> -->
+       <li><a href="germanyculture.html">Kultur</a></li>
+       <li><a href="germanystory.html">Geschichte</a></li>
+       <li><a href="germanytravel.html">Reisen</a></li>
+       <li><a href="germanycontact.html">Kontakt</a></li>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video autoplay loop muted>
+        <source src="128131-740854585_medium.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-content">
+        <h1>Entdecke das Herz Europas</h1>
+        <p>Willkommen auf unserer Website, die dem wunderbaren Land Deutschland gewidmet ist.</p>
+        <a href="germanylearnmore.html" class="cta">Mehr erfahren</a>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>Über Deutschland</h2>
+      <div class="about-content">
+        <img src="architecture-4468573_1920.jpg" alt="Deutschland">
+        <p>Deutschland ist ein faszinierendes Land, das auf einzigartige Weise atemberaubende Naturlandschaften mit einer florierenden Wirtschaft vereint. Vom malerischen Rhein, gesäumt von mittelalterlichen Burgen, bis hin zu den majestätischen Alpen im Süden bietet Deutschlands vielfältige Landschaft ein wahres Fest für die Sinne. Die Hauptstadt Berlin hat sich zudem bemerkenswert gewandelt und ist aus den Trümmern des Krieges zu einem lebendigen, 
+          modernen Zentrum erstanden.
+          Wirtschaftlich gesehen ist Deutschland eine globale Macht. Nach dem Zweiten Weltkrieg erholte sich das Land schnell und avancierte zu einem Vorreiter in den Bereichen Fertigung, Ingenieurwesen und Technologie. Die starke finanzielle Stellung und stabile Wirtschaft haben wesentlich zum Wohlstand und globalen Einfluss Deutschlands beigetragen. 
+          Die Kombination aus natürlicher Schönheit und wirtschaftlicher Stärke macht Deutschland zu einer wahrhaft bemerkenswerten Nation.</p>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <h2>Highlights in Deutschland</h2>
+      <div class="highlight-items">
+        <div class="highlight-item">
+          <img src="berlin-8429780_1920.jpg" alt="Berlin">
+          <h3>Berlin</h3>
+          <p>Berlin ist eine faszinierende Stadt, die eine einzigartige Symbiose aus pulsierendem Stadtleben und atemberaubender Natur bietet. Von den historischen Wahrzeichen wie dem Brandenburger Tor bis hin zu den grünen Oasen wie dem Tiergarten und dem Grunewald Wald, spiegelt die Hauptstadt Deutschlands eine bemerkenswerte Vielfalt wider.
+            Die Berliner Architektur erzählt eine Geschichte von Wandel und Erneuerung, mit modernen Hochhäusern, die sich harmonisch neben restaurierten Altbauten erheben. Die Stadt ist ein Schmelztiegel der Kulturen, in dem Traditionen und Innovationen Hand in Hand gehen.
+            Gleichzeitig ist Berlin ein Refugium für Naturliebhaber. Die zahlreichen Parks, Seen und Wälder bieten unzählige Möglichkeiten, der Hektik des Stadtlebens zu entfliehen und Ruhe und Erholung zu finden. Ob beim Spazierengehen, Radfahren oder Wassersport - Berlin vereint auf einzigartige Weise urbane Dynamik und natürliche Schönheit.</p>
+        </div>
+        <div class="highlight-item">
+          <img src="MunichCityBusTourFCBayernMunichFootballArenaTour.jpg" alt="Bayern">
+          <h3>München</h3>
+          <p>München, die Hauptstadt des Freistaats Bayern, ist eine faszinierende Stadt, die Tradition und Moderne auf einzigartige Weise vereint. Als drittgrößte Stadt Deutschlands nach Berlin und Hamburg ist München nicht nur ein wirtschaftliches Zentrum, sondern auch ein Magnet für Touristen aus aller Welt.
+            Die bayerische Metropole blickt auf eine über 850-jährige Geschichte zurück und beeindruckt mit ihrer charakteristischen Architektur. Vom mittelalterlichen Marienplatz mit dem gotischen Rathaus bis hin zu modernen Wahrzeichen wie dem Olympiapark zeugt München von seiner reichen Vergangenheit und seinem stetigen Wandel.
+            Neben seiner kulturellen Vielfalt ist München auch ein bedeutender Wirtschaftsstandort. Mit Unternehmen wie BMW, Siemens und Allianz beherbergt die Stadt einige der größten Konzerne Deutschlands. Gleichzeitig ist München ein Innovationszentrum, das durch seine Forschungseinrichtungen und Universitäten neue Impulse setzt.
+            </p>
+        </div>
+        <div class="highlight-item">
+          <img src="cologne-cathedral-1846338_1920.jpg" alt="Köln">
+          <h3>Köln</h3>
+          <p>Köln, die größte Stadt Nordrhein-Westfalens, ist eine faszinierende Metropole, die Tradition und Moderne auf einzigartige Weise vereint. Geprägt von seiner über 2.000-jährigen Geschichte, beeindruckt die Stadt mit einer Vielzahl an kulturellen Schätzen.
+            Der imposante Kölner Dom, das Wahrzeichen der Stadt, thront majestätisch über den Ufern des Rheins. Neben dieser gotischen Kathedrale finden sich zahlreiche weitere romanische Kirchen, die Zeugnis von Kölns reicher Vergangenheit ablegen. Doch Köln ist weit mehr als nur seine historischen Bauten - es ist auch eine pulsierende Metropole mit moderner Architektur, einer lebendigen Kunstszene und einer florierenden Wirtschaft.
+            Als Universitätsstadt und Medienstandort ist Köln ein Zentrum von Bildung und Innovation. Gleichzeitig zieht die rheinische Lebensfreude, verkörpert durch den weltberühmten Karneval, jedes Jahr Millionen Besucher an. Ob Tradition oder Moderne, Köln bietet eine einzigartige Mischung, die die Stadt zu einem der attraktivsten Reiseziele Deutschlands macht.
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2>Bevorstehende Veranstaltungen</h2>
+      <div class="event-items">
+        <div class="event-item">
+          <img src="oktoberfest-4566791_640.jpg" alt="Oktoberfest">
+          <h3>Oktoberfest</h3>
+          <p>Das weltberühmte Oktoberfest findet jedes Jahr in München statt und ist ein Muss für jeden Besucher Deutschlands.</p>
+          <a href="germanyOktoberfest.html" class="event-link">Mehr erfahren</a>
+        </div>
+        <div class="event-item">
+          <img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" alt="Weihnachtsmarkt">
+          <h3>Weihnachtsmärkte</h3>
+          <p>Die traditionellen deutschen Weihnachtsmärkte sind ein einzigartiges Erlebnis voller Zauber und Gemütlichkeit.</p>
+          <a href="germanyWeihnachtsmärkte.html" class="event-link">Mehr erfahren</a>
+        </div>
+        <div class="event-item">
+          <img src="karneval-in-germany1.jpg" alt="Karneval">
+          <h3>Karneval</h3>
+          <p>Der bunte und fröhliche deutsche Karneval ist eine Feier der Lebensfreude und Tradition.</p>
+          <a href="germanyKarneval.html" class="event-link">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Was unsere Besucher sagen</h2>
+      <div class="testimonial-items">
+        <div class="testimonial-item">
+          <!-- <img src="testimonial1.jpg" alt="Testimonial 1"> -->
+          <blockquote>
+            <p>"Deutschland hat mich vollkommen überrascht Die Kultur, die Landschaft und die Menschen sind einfach wunderbar."</p>
+            <cite>- Sarah, Australien</cite>
+          </blockquote>
+        </div>
+        <div class="testimonial-item">
+          <!-- <img src="testimonial2.jpg" alt="Testimonial 2"> -->
+          <blockquote>
+            <p>"Ich habe mich in Deutschland wie zu Hause gefühlt. Die Gastfreundschaft und Offenheit der Deutschen haben mich begeistert."</p>
+            <cite>- Michael, Kanada</cite>
+          </blockquote>
+        </div>
+        <div class="testimonial-item">
+          <!-- <img src="testimonial3.jpg" alt="Testimonial 3"> -->
+          <blockquote>
+            <p>"Jeder Besuch in Deutschland ist ein Abenteuer voller Entdeckungen. Ich kann es kaum erwarten, wieder zurückzukehren."</p>
+            <cite>- Lena, Russland</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Willkommen in Deutschland. Alle Rechte vorbehalten.</p>
+  </footer>
+
+</body>
+</html>

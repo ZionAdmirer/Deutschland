@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reisen - Deutschland-Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFCE00;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    /* Kopfzeilenstile */
+    header {
+      background-color: #000000;
+      padding: 20px;
+      border-bottom: 5px solid #DD0000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      color: #DD0000;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #FFCE00;
+      font-weight: bold;
+    }
+
+    /* Reiseabschnittsstile */
+    .travel {
+      padding: 60px 20px;
+      border-bottom: 5px solid #DD0000;
+    }
+
+    .travel-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .travel h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .travel-sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .travel-section {
+      width: 45%;
+      margin: 0 2.5% 40px;
+      padding: 20px;
+      background-color: #FFCE00;
+      border: 5px solid #000000;
+      border-image: linear-gradient(to right, #000000, #DD0000, #FFCE00, #DD0000, #000000) 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .travel-section h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .travel-section p {
+      margin-bottom: 20px;
+    }
+
+    .travel-section img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid #000000;
+      margin-bottom: 20px;
+    }
+
+    .travel-section button {
+      background-color: #000000;
+      color: #FFCE00;
+      padding: 10px 20px;
+      border: 2px solid #DD0000;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+    .learn-more {
+  background-color: #000000; /* Black */
+  color: #FFCE00; /* Yellow */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px solid #DD0000; /* Red */
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+    /* Fußzeilenstile */
+    footer {
+      background-color: #000000;
+      color: #FFCE00;
+      text-align: center;
+      padding: 20px;
+      border-top: 5px solid #DD0000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DEUTSCHLAND</div>
+    <nav>
+      <ul>
+        <!-- <li><a href="#">Startseite</a></li>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Highlights</a></li>
+        <li><a href="#">Veranstaltungen</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Kultur</a></li>
+        <li><a href="#">Reisen</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="travel">
+      <div class="travel-content">
+        <h2>Reisen in Deutschland</h2>
+        <div class="travel-sections">
+          <div class="travel-section">
+            <img src="pexels-annamw-1057840.jpg" alt="Travel 1">
+            <h3>Berlin</h3>
+            <p>Die Hauptstadt Deutschlands ist ein Schmelztiegel der Kulturen und bietet eine einzigartige Mischung aus Geschichte, Moderne und Lebendigkeit.</p>
+            <a href="germanyberlin.html" class="learn-more">Mehr erfahren</a>
+          </div>
+          <div class="travel-section">
+            <img src="munich-2516492_1280.jpg" alt="Travel 2">
+            <h3>München</h3>
+            <p>München, die Hauptstadt Bayerns, ist bekannt für seine Tradition, Bier und Lebensfreude. Die Stadt ist ein beliebtes Reiseziel für Touristen.</p>
+            <a href="germanymunchen.html" class="learn-more">Mehr erfahren</a>
+          </div>
+          <div class="travel-section">
+            <img src="autumn-4491113_1280.jpg" alt="Travel 3">
+            <h3>Schwarzwald</h3>
+            <p>Der Schwarzwald ist eine der schönsten Naturregionen Deutschlands. Wanderer und Naturliebhaber finden hier unzählige Möglichkeiten zum Entdecken.</p>
+            <a href="germanyblackforest.html" class="learn-more">Mehr erfahren</a>
+          </div>
+          <div class="travel-section">
+            <img src="rhine-valley-6665508_1280.jpg" alt="Travel 4">
+            <h3>Rheintal</h3>
+            <p>Das Rheintal ist eine malerische Region mit mittelalterlichen Burgen, Weinbergen und idyllischen Städtchen. Es ist ein beliebtes Reiseziel für Kulturinteressierte.</p>
+            <a href="germanyrhinevalley.html" class="learn-more">Mehr erfahren</a>
+          </div>
+          <div class="travel-section">
+            <img src="Rugen-Island.jpg" alt="Travel 5">
+            <h3>Rügen</h3>
+            <p>Die Insel Rügen in der Ostsee ist bekannt für ihre beeindruckenden Kreidefelsen, malerischen Strände und die typische Bäderarchitektur.</p>
+            <a href="germanyreprimand.html" class="learn-more">Mehr erfahren</a>
+          </div>
+          <div class="travel-section">
+            <img src="64cf4ceee59c1a2151ac4727b1f5378e-rothenburg-ob-der-tauber.avif" alt="Travel 6">
+            <h3>Rothenburg ob der Tauber</h3>
+            <p>Rothenburg ob der Tauber ist eine der besterhaltenen mittelalterlichen Städte Deutschlands. Sie bietet einen einzigartigen Einblick in die deutsche Geschichte.</p>
+            <a href="germanyruthenburg.html" class="learn-more">Mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Deutschland-Website. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>

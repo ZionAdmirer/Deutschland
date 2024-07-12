@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Deutschland-Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFCE00;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    /* Kopfzeilenstile */
+    header {
+      background-color: #000000;
+      padding: 20px;
+      border-bottom: 5px solid #DD0000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      color: #DD0000;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #FFCE00;
+      font-weight: bold;
+    }
+
+    /* Kontaktabschnittsstile */
+    .contact {
+      padding: 60px 20px;
+      border-bottom: 5px solid #DD0000;
+    }
+
+    .contact-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 5px solid #000000;
+      border-image: linear-gradient(to right, #000000, #DD0000, #FFCE00, #DD0000, #000000) 1;
+    }
+
+    .contact-info {
+      flex: 1;
+      padding: 20px;
+      background-color: #FFCE00;
+      border-right: 5px solid #000000;
+    }
+
+    .contact-info h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      flex: 2;
+      padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+    }
+
+    .contact-form button {
+      background-color: #000000;
+      color: #FFCE00;
+      padding: 10px 20px;
+      border: 2px solid #DD0000;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Fußzeilenstile */
+    footer {
+      background-color: #000000;
+      color: #FFCE00;
+      text-align: center;
+      padding: 20px;
+      border-top: 5px solid #DD0000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DEUTSCHLAND</div>
+    <nav>
+      <ul>
+        <!-- <li><a href="#">Startseite</a></li>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Highlights</a></li>
+        <li><a href="#">Veranstaltungen</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Kultur</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Kontaktieren Sie uns</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Kontaktinformationen</h3>
+            <p>Adresse: Musterstraße 12, 12345 Musterhausen</p>
+            <p>Telefon: 0123 456 789</p>
+            <p>E-Mail: info@deutschland-website.de</p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="E-Mail" required>
+            <textarea placeholder="Nachricht" required></textarea>
+            <button type="submit">Nachricht senden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Deutschland-Website. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
